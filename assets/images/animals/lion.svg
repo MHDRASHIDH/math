@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Mane Gradient -->
+    <radialGradient id="lionMane" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="60%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </radialGradient>
+    <radialGradient id="lionFace" cx="45%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="70%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </radialGradient>
+  </defs>
+  <!-- Mane Petals (3D wavy lion mane) -->
+  <circle cx="50" cy="50" r="44" fill="url(#lionMane)"/>
+  <!-- Mane Tufts -->
+  <circle cx="50" cy="12" r="14" fill="#ea580c"/>
+  <circle cx="24" cy="22" r="14" fill="#ea580c"/>
+  <circle cx="76" cy="22" r="14" fill="#ea580c"/>
+  <circle cx="12" cy="50" r="14" fill="#ea580c"/>
+  <circle cx="88" cy="50" r="14" fill="#ea580c"/>
+  <circle cx="24" cy="78" r="14" fill="#ea580c"/>
+  <circle cx="76" cy="78" r="14" fill="#ea580c"/>
+  <circle cx="50" cy="88" r="14" fill="#ea580c"/>
+  <!-- Ears -->
+  <circle cx="28" cy="25" r="9" fill="#facc15"/>
+  <circle cx="28" cy="25" r="5" fill="#f43f5e"/>
+  <circle cx="72" cy="25" r="9" fill="#facc15"/>
+  <circle cx="72" cy="25" r="5" fill="#f43f5e"/>
+  <!-- Face -->
+  <ellipse cx="50" cy="54" rx="30" ry="26" fill="url(#lionFace)"/>
+  <!-- Cheeks Blush -->
+  <ellipse cx="32" cy="62" rx="5" ry="3" fill="#f472b6" opacity="0.4"/>
+  <ellipse cx="68" cy="62" rx="5" ry="3" fill="#f472b6" opacity="0.4"/>
+  <!-- Eyes -->
+  <ellipse cx="38" cy="48" rx="5" ry="6" fill="#18181b"/>
+  <circle cx="36" cy="46" r="2" fill="#ffffff"/>
+  <ellipse cx="62" cy="48" rx="5" ry="6" fill="#18181b"/>
+  <circle cx="60" cy="46" r="2" fill="#ffffff"/>
+  <!-- Muzzle -->
+  <ellipse cx="50" cy="62" rx="12" ry="8" fill="#ffffff"/>
+  <!-- Nose -->
+  <polygon points="50,56 45,52 55,52" fill="#78350f"/>
+  <!-- Mouth -->
+  <path d="M 45 61 Q 50 67 55 61" stroke="#78350f" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

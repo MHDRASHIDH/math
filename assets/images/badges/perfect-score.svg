@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <circle cx="50" cy="50" r="46" fill="#f59e0b" stroke="#fef08a" stroke-width="3"/>
+  <circle cx="50" cy="50" r="38" fill="#d97706"/>
+  <!-- Gold Trophy -->
+  <path d="M 32 30 L 68 30 C 68 50, 58 64, 50 64 C 42 64, 32 50, 32 30 Z" fill="#facc15" stroke="#fef08a" stroke-width="1.5"/>
+  <path d="M 26 36 C 20 36, 20 48, 32 50" fill="none" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 74 36 C 80 36, 80 48, 68 50" fill="none" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
+  <rect x="47" y="64" width="6" height="10" fill="#facc15"/>
+  <rect x="38" y="74" width="24" height="6" rx="2" fill="#78350f"/>
+  <circle cx="50" cy="42" r="3" fill="#ffffff"/>
+</svg>

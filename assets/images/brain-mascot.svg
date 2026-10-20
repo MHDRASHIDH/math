@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <!-- 3D Pink Brain Gradients -->
+    <radialGradient id="brainGlow" cx="50%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffb6d9"/>
+      <stop offset="45%" stop-color="#ff66a8"/>
+      <stop offset="85%" stop-color="#d82b75"/>
+      <stop offset="100%" stop-color="#99154c"/>
+    </radialGradient>
+    <radialGradient id="highlightGlow" cx="40%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffb6d9" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Eye Gradient -->
+    <radialGradient id="eyeGrad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="60%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </radialGradient>
+    <!-- Sneaker Blue Gradient -->
+    <linearGradient id="shoeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <!-- Drop Shadow Filter -->
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <!-- Legs & Shoes -->
+    <!-- Left Leg -->
+    <path d="M 95 185 L 90 208" stroke="#d82b75" stroke-width="10" stroke-linecap="round"/>
+    <!-- Right Leg -->
+    <path d="M 145 185 L 150 208" stroke="#d82b75" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Left Sneaker -->
+    <path d="M 72 215 C 72 205, 92 200, 104 205 C 108 212, 106 222, 94 225 C 80 227, 72 222, 72 215 Z" fill="url(#shoeGrad)"/>
+    <ellipse cx="88" cy="223" rx="14" ry="4" fill="#ffffff" opacity="0.9"/>
+    <!-- Right Sneaker -->
+    <path d="M 136 205 C 148 200, 168 205, 168 215 C 168 222, 160 227, 146 225 C 134 222, 132 212, 136 205 Z" fill="url(#shoeGrad)"/>
+    <ellipse cx="152" cy="223" rx="14" ry="4" fill="#ffffff" opacity="0.9"/>
+
+    <!-- Arms -->
+    <!-- Left Arm waving / thumbs up -->
+    <path d="M 58 140 C 35 130, 28 105, 38 95 C 45 88, 54 98, 56 112" fill="none" stroke="url(#brainGlow)" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="38" cy="95" r="9" fill="#ff85be"/>
+    <!-- Right Arm cheering fist -->
+    <path d="M 182 140 C 205 130, 212 105, 202 95 C 195 88, 186 98, 184 112" fill="none" stroke="url(#brainGlow)" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="202" cy="95" r="9" fill="#ff85be"/>
+
+    <!-- Brain Body Main Shape -->
+    <!-- Lower base lobes -->
+    <ellipse cx="85" cy="155" rx="36" ry="32" fill="url(#brainGlow)"/>
+    <ellipse cx="155" cy="155" rx="36" ry="32" fill="url(#brainGlow)"/>
+    <!-- Upper side lobes -->
+    <ellipse cx="65" cy="115" rx="35" ry="32" fill="url(#brainGlow)"/>
+    <ellipse cx="175" cy="115" rx="35" ry="32" fill="url(#brainGlow)"/>
+    <!-- Top lobes -->
+    <ellipse cx="82" cy="72" rx="36" ry="34" fill="url(#brainGlow)"/>
+    <ellipse cx="158" cy="72" rx="36" ry="34" fill="url(#brainGlow)"/>
+    <ellipse cx="120" cy="65" rx="30" ry="26" fill="url(#brainGlow)"/>
+    <!-- Central blend -->
+    <circle cx="120" cy="125" r="54" fill="url(#brainGlow)"/>
+
+    <!-- Highlights on lobes for 3D sphere effect -->
+    <ellipse cx="78" cy="62" rx="20" ry="12" fill="url(#highlightGlow)" transform="rotate(-15 78 62)"/>
+    <ellipse cx="162" cy="62" rx="20" ry="12" fill="url(#highlightGlow)" transform="rotate(15 162 62)"/>
+    <ellipse cx="55" cy="105" rx="14" ry="10" fill="url(#highlightGlow)" transform="rotate(-30 55 105)"/>
+    <ellipse cx="185" cy="105" rx="14" ry="10" fill="url(#highlightGlow)" transform="rotate(30 185 105)"/>
+
+    <!-- Brain Creases / Folds with soft shadows -->
+    <path d="M 120 50 C 118 80, 122 105, 120 120" stroke="#831241" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <path d="M 85 80 C 100 90, 110 85, 115 100" stroke="#831241" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+    <path d="M 155 80 C 140 90, 130 85, 125 100" stroke="#831241" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+    <path d="M 68 135 C 80 130, 92 136, 100 145" stroke="#831241" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+    <path d="M 172 135 C 160 130, 148 136, 140 145" stroke="#831241" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+    <!-- Rosy Cheek Blushes -->
+    <ellipse cx="75" cy="148" rx="14" ry="8" fill="#ff4d88" opacity="0.45"/>
+    <ellipse cx="165" cy="148" rx="14" ry="8" fill="#ff4d88" opacity="0.45"/>
+
+    <!-- Left Big Eye -->
+    <ellipse cx="94" cy="122" rx="16" ry="21" fill="#ffffff"/>
+    <ellipse cx="96" cy="123" rx="11" ry="15" fill="url(#eyeGrad)"/>
+    <circle cx="98" cy="124" r="6" fill="#030712"/>
+    <circle cx="92" cy="115" r="4.5" fill="#ffffff"/>
+    <circle cx="99" cy="128" r="2" fill="#ffffff"/>
+
+    <!-- Right Big Eye -->
+    <ellipse cx="146" cy="122" rx="16" ry="21" fill="#ffffff"/>
+    <ellipse cx="144" cy="123" rx="11" ry="15" fill="url(#eyeGrad)"/>
+    <circle cx="142" cy="124" r="6" fill="#030712"/>
+    <circle cx="148" cy="115" r="4.5" fill="#ffffff"/>
+    <circle cx="141" cy="128" r="2" fill="#ffffff"/>
+
+    <!-- Big Happy Open Smile with Tongue -->
+    <path d="M 102 144 Q 120 172 138 144" fill="#670629" stroke="#50041f" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Tongue -->
+    <path d="M 110 156 Q 120 150 130 156 Q 120 170 110 156 Z" fill="#ff70a6"/>
+  </g>
+</svg>

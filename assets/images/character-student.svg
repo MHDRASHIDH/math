@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340" width="100%" height="100%">
+  <defs>
+    <!-- Skin Tone Gradient -->
+    <radialGradient id="skinGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffdfba"/>
+      <stop offset="70%" stop-color="#f5be93"/>
+      <stop offset="100%" stop-color="#df9a67"/>
+    </radialGradient>
+    <!-- Hair Brown Gradient -->
+    <linearGradient id="hairGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3f1d"/>
+      <stop offset="40%" stop-color="#54250e"/>
+      <stop offset="100%" stop-color="#311406"/>
+    </linearGradient>
+    <!-- Hoodie Blue 3D Gradient -->
+    <linearGradient id="hoodieGrad" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <!-- Eye Brown/Hazel Gradient -->
+    <radialGradient id="teenEyeGrad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#9a3412"/>
+      <stop offset="65%" stop-color="#431407"/>
+      <stop offset="100%" stop-color="#180702"/>
+    </radialGradient>
+    <!-- Notebook Teal Gradient -->
+    <linearGradient id="bookGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="charShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#charShadow)">
+    <!-- Back Hair Tufts -->
+    <path d="M 80 120 C 70 80, 85 45, 140 40 C 200 45, 215 80, 205 120 Z" fill="url(#hairGrad)"/>
+
+    <!-- Neck -->
+    <path d="M 125 155 L 125 185 L 155 185 L 155 155 Z" fill="#df9a67"/>
+
+    <!-- Ears -->
+    <ellipse cx="88" cy="118" rx="10" ry="14" fill="#f5be93"/>
+    <ellipse cx="89" cy="118" rx="6" ry="9" fill="#df9a67"/>
+    <ellipse cx="192" cy="118" rx="10" ry="14" fill="#f5be93"/>
+    <ellipse cx="191" cy="118" rx="6" ry="9" fill="#df9a67"/>
+
+    <!-- Face Base -->
+    <path d="M 92 105 C 92 65, 188 65, 188 105 C 188 140, 165 168, 140 168 C 115 168, 92 140, 92 105 Z" fill="url(#skinGrad)"/>
+
+    <!-- Cheeks Blush -->
+    <ellipse cx="106" cy="132" rx="11" ry="6" fill="#f472b6" opacity="0.35"/>
+    <ellipse cx="174" cy="132" rx="11" ry="6" fill="#f472b6" opacity="0.35"/>
+
+    <!-- Eyes -->
+    <!-- Left Eye -->
+    <ellipse cx="114" cy="115" rx="11" ry="13" fill="#ffffff"/>
+    <ellipse cx="116" cy="116" rx="7.5" ry="9.5" fill="url(#teenEyeGrad)"/>
+    <circle cx="117" cy="117" r="4" fill="#000000"/>
+    <circle cx="113" cy="111" r="3" fill="#ffffff"/>
+    <circle cx="118" cy="120" r="1.5" fill="#ffffff"/>
+    <!-- Left Eyebrow -->
+    <path d="M 103 100 Q 116 93 126 98" stroke="#311406" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Right Eye -->
+    <ellipse cx="166" cy="115" rx="11" ry="13" fill="#ffffff"/>
+    <ellipse cx="164" cy="116" rx="7.5" ry="9.5" fill="url(#teenEyeGrad)"/>
+    <circle cx="163" cy="117" r="4" fill="#000000"/>
+    <circle cx="161" cy="111" r="3" fill="#ffffff"/>
+    <circle cx="166" cy="120" r="1.5" fill="#ffffff"/>
+    <!-- Right Eyebrow -->
+    <path d="M 154 98 Q 164 93 177 100" stroke="#311406" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Nose -->
+    <path d="M 140 120 Q 143 129 137 131" stroke="#c27847" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Cheerful Confident Smile -->
+    <path d="M 125 142 Q 140 156 155 142" fill="#581c0c" stroke="#451105" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 130 143 Q 140 150 150 143 Z" fill="#ffffff"/>
+
+    <!-- 3D Styled Messy Hair Front / Fringe -->
+    <path d="M 80 92 C 85 55, 110 32, 142 32 C 178 32, 202 55, 202 92 C 195 72, 175 75, 165 82 C 152 70, 130 68, 120 85 C 112 72, 95 78, 80 92 Z" fill="url(#hairGrad)"/>
+    <path d="M 98 48 C 120 25, 150 25, 168 38 C 158 35, 140 36, 128 42 Z" fill="#9a4d22" opacity="0.6"/>
+    <!-- Cute hair strand spikes -->
+    <path d="M 118 78 Q 124 95 120 102 Q 115 90 118 78 Z" fill="url(#hairGrad)"/>
+    <path d="M 155 76 Q 162 94 158 100 Q 152 88 155 76 Z" fill="url(#hairGrad)"/>
+
+    <!-- White T-Shirt Collar / Inner Crewneck -->
+    <path d="M 122 178 Q 140 192 158 178 L 158 188 Q 140 200 122 188 Z" fill="#f8fafc"/>
+
+    <!-- Blue Hoodie Torso -->
+    <path d="M 75 220 C 75 185, 110 180, 140 180 C 170 180, 205 185, 205 220 L 215 330 L 65 330 Z" fill="url(#hoodieGrad)"/>
+    <!-- Hoodie Strings -->
+    <path d="M 128 190 L 126 230" stroke="#f1f5f9" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="126" cy="232" r="3" fill="#cbd5e1"/>
+    <path d="M 152 190 L 154 230" stroke="#f1f5f9" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="154" cy="232" r="3" fill="#cbd5e1"/>
+    <!-- Hoodie Pocket / Seam -->
+    <path d="M 95 285 Q 140 295 185 285 L 180 325 Q 140 330 100 325 Z" fill="#1e40af" opacity="0.6"/>
+
+    <!-- Backpack Straps (Navy/Dark Blue) -->
+    <path d="M 88 192 C 86 230, 85 270, 85 320" stroke="#0f172a" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M 192 192 C 194 230, 195 270, 195 320" stroke="#0f172a" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+    <!-- Left Arm holding Book / Notebook -->
+    <path d="M 78 205 C 60 225, 45 260, 52 285 L 75 295 C 72 265, 82 235, 95 215 Z" fill="url(#hoodieGrad)"/>
+    <!-- Notebook (Teal Binder with stickers) -->
+    <rect x="36" y="245" width="46" height="62" rx="6" fill="url(#bookGrad)" transform="rotate(-15 59 276)"/>
+    <rect x="34" y="247" width="8" height="58" rx="3" fill="#042f2e" transform="rotate(-15 59 276)"/>
+    <circle cx="58" cy="272" r="5" fill="#facc15" transform="rotate(-15 59 276)"/>
+    <!-- Left Hand clamping notebook -->
+    <ellipse cx="68" cy="298" rx="10" ry="8" fill="#f5be93"/>
+    <ellipse cx="62" cy="296" rx="6" ry="6" fill="#f5be93"/>
+
+    <!-- Right Arm: Big Thumbs Up Gesture! -->
+    <!-- Arm reaching forward / right -->
+    <path d="M 198 208 C 220 225, 235 240, 245 230 C 250 222, 230 205, 205 195 Z" fill="url(#hoodieGrad)"/>
+    <!-- Hand with Thumbs Up! -->
+    <g transform="translate(230, 195)">
+      <!-- Palm / Fist -->
+      <ellipse cx="14" cy="22" rx="13" ry="12" fill="#f5be93"/>
+      <!-- Fingers curled -->
+      <path d="M 8 18 Q 20 18 20 25 Q 12 28 8 22" fill="#e59866" stroke="#c27847" stroke-width="1.5"/>
+      <path d="M 8 24 Q 22 24 22 30 Q 12 34 8 28" fill="#e59866" stroke="#c27847" stroke-width="1.5"/>
+      <!-- BIG THUMB UP -->
+      <path d="M 6 16 C 6 4, 18 2, 20 12 C 22 20, 14 22, 6 16 Z" fill="#ffdfba" stroke="#df9a67" stroke-width="1.5"/>
+      <ellipse cx="14" cy="8" rx="4" ry="7" fill="#ffffff" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

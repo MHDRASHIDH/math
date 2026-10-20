@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" width="100%" height="100%">
+  <defs>
+    <radialGradient id="thSkin" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffdfba"/>
+      <stop offset="70%" stop-color="#f5be93"/>
+      <stop offset="100%" stop-color="#df9a67"/>
+    </radialGradient>
+    <linearGradient id="thHair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3f1d"/>
+      <stop offset="40%" stop-color="#54250e"/>
+      <stop offset="100%" stop-color="#311406"/>
+    </linearGradient>
+    <linearGradient id="thHoodie" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <radialGradient id="bulbGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fef08a"/>
+      <stop offset="80%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </radialGradient>
+    <filter id="glowFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Glowing Lightbulb (above head) -->
+  <g transform="translate(145, 10)">
+    <!-- Light Rays -->
+    <path d="M 35 5 L 35 -10 M 15 15 L 2 5 M 55 15 L 68 5 M 8 35 L -8 35 M 62 35 L 78 35" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" opacity="0.8"/>
+    <!-- Glow aura -->
+    <circle cx="35" cy="35" r="30" fill="#fde047" opacity="0.3" filter="url(#glowFilter)"/>
+    <!-- Bulb Glass -->
+    <path d="M 22 45 C 16 35, 16 20, 26 10 C 35 2, 45 4, 52 14 C 58 22, 54 35, 48 45 Z" fill="url(#bulbGlow)"/>
+    <!-- Filament -->
+    <path d="M 30 38 Q 35 25 40 38" fill="none" stroke="#ca8a04" stroke-width="2"/>
+    <!-- Base Screw -->
+    <rect x="27" y="47" width="16" height="4" rx="2" fill="#94a3b8"/>
+    <rect x="29" y="52" width="12" height="4" rx="2" fill="#64748b"/>
+    <ellipse cx="35" cy="57" rx="4" ry="2" fill="#334155"/>
+  </g>
+
+  <!-- Character -->
+  <g transform="translate(20, 30)">
+    <!-- Back Hair -->
+    <path d="M 50 115 C 40 75, 55 40, 110 35 C 170 40, 185 75, 175 115 Z" fill="url(#thHair)"/>
+    <!-- Neck -->
+    <path d="M 95 150 L 95 180 L 125 180 L 125 150 Z" fill="#df9a67"/>
+    <!-- Ears -->
+    <ellipse cx="58" cy="113" rx="9" ry="13" fill="#f5be93"/>
+    <ellipse cx="162" cy="113" rx="9" ry="13" fill="#f5be93"/>
+    <!-- Face -->
+    <path d="M 62 100 C 62 60, 158 60, 158 100 C 158 135, 135 163, 110 163 C 85 163, 62 135, 62 100 Z" fill="url(#thSkin)"/>
+    <!-- Cheeks -->
+    <ellipse cx="76" cy="127" rx="10" ry="5.5" fill="#f472b6" opacity="0.35"/>
+    <ellipse cx="144" cy="127" rx="10" ry="5.5" fill="#f472b6" opacity="0.35"/>
+    
+    <!-- Eyes looking up/curious -->
+    <ellipse cx="84" cy="110" rx="10" ry="12" fill="#ffffff"/>
+    <ellipse cx="86" cy="108" rx="7" ry="8.5" fill="#431407"/>
+    <circle cx="87" cy="108" r="3.5" fill="#000000"/>
+    <circle cx="84" cy="104" r="2.5" fill="#ffffff"/>
+    <!-- Eyebrow raised -->
+    <path d="M 74 94 Q 86 86 96 92" stroke="#311406" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <ellipse cx="136" cy="110" rx="10" ry="12" fill="#ffffff"/>
+    <ellipse cx="138" cy="108" rx="7" ry="8.5" fill="#431407"/>
+    <circle cx="139" cy="108" r="3.5" fill="#000000"/>
+    <circle cx="136" cy="104" r="2.5" fill="#ffffff"/>
+    <!-- Eyebrow quizzical -->
+    <path d="M 124 93 Q 134 85 147 90" stroke="#311406" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Nose -->
+    <path d="M 110 115 Q 113 124 107 126" stroke="#c27847" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Pondering smirk/mouth -->
+    <path d="M 100 138 Q 112 144 122 138" fill="none" stroke="#451105" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Front Hair -->
+    <path d="M 50 87 C 55 50, 80 27, 112 27 C 148 27, 172 50, 172 87 C 165 67, 145 70, 135 77 C 122 65, 100 63, 90 80 C 82 67, 65 73, 50 87 Z" fill="url(#thHair)"/>
+
+    <!-- White Collar -->
+    <path d="M 92 173 Q 110 187 128 173 L 128 183 Q 110 195 92 183 Z" fill="#f8fafc"/>
+
+    <!-- Blue Hoodie Torso -->
+    <path d="M 45 215 C 45 180, 80 175, 110 175 C 140 175, 175 180, 175 215 L 185 290 L 35 290 Z" fill="url(#thHoodie)"/>
+
+    <!-- Left Arm Resting -->
+    <path d="M 48 200 C 35 220, 25 250, 30 280 L 50 285 C 48 255, 58 230, 68 210 Z" fill="url(#thHoodie)"/>
+
+    <!-- Right Arm: Hand on Chin (Thinking Pose!) -->
+    <path d="M 165 205 C 175 225, 170 255, 140 260 C 130 240, 132 205, 145 190 Z" fill="url(#thHoodie)"/>
+    <!-- Forearm reaching up to chin -->
+    <path d="M 140 255 C 130 235, 125 205, 128 165" stroke="url(#thHoodie)" stroke-width="24" stroke-linecap="round"/>
+    <!-- Hand at chin -->
+    <g transform="translate(122, 142)">
+      <!-- Index finger pointing up to cheek -->
+      <path d="M 6 12 C 4 0, 12 0, 12 12 L 10 18" stroke="#f5be93" stroke-width="7" stroke-linecap="round"/>
+      <!-- Curled thumb and fingers supporting jaw -->
+      <ellipse cx="6" cy="18" rx="8" ry="7" fill="#f5be93"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,194 @@
+/* ============================================================
+   MathMind Kids – Accessibility Stylesheet
+   WCAG 2.1 AA compliance helpers
+   ============================================================ */
+
+/* ── Focus Styles ─────────────────────────────────────────────── */
+/* Remove default and apply a clear, consistent focus ring */
+*:focus { outline: none; }
+
+*:focus-visible {
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Stronger focus for interactive controls */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 3px;
+}
+
+/* ── Skip to Content ─────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--sp-md);
+  padding: var(--sp-sm) var(--sp-md);
+  background: var(--clr-primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus { top: var(--sp-md); }
+
+/* ── Reduced Motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .memory-card { transition: none; }
+}
+
+/* ── High Contrast Overrides ─────────────────────────────────── */
+@media (forced-colors: active) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-accent { forced-color-adjust: none; }
+
+  .progress-bar-fill { background: Highlight; }
+
+  .badge-card.unlocked { border: 2px solid Highlight; }
+}
+
+/* ── ARIA Live Regions ───────────────────────────────────────── */
+[aria-live] { border: 0; clip: rect(0,0,0,0); }
+
+/* ── Large Text ──────────────────────────────────────────────── */
+@media (min-resolution: 192dpi) {
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+}
+
+/* ── Keyboard-only visible focus enhancement ─────────────────── */
+.game-card:focus-visible {
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 4px;
+}
+
+.option-btn:focus-visible,
+.seq-btn:focus-visible,
+.memory-card:focus-visible {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+  z-index: 1;
+}
+
+/* ── Touch targets ───────────────────────────────────────────── */
+/* Ensure min 44×44px touch target for interactive elements */
+.btn, .btn-icon, .diff-btn, .age-btn,
+.seq-btn, .option-btn, .memory-card,
+.nav-links a, .toggle { min-height: 44px; min-width: 44px; }
+
+/* ── Colour-blind friendliness ───────────────────────────────── */
+/* All state changes also use shape/icon, not just colour.
+   correct = ✓ icon, wrong = ✗ icon via aria-label + content */
+
+/* ── Text spacing for readability ────────────────────────────── */
+p, li, dd { max-width: 70ch; }
+
+/* ── Ensure interactive elements have discernible names ──────── */
+button:not([aria-label]):empty::before { content: 'Button'; }
+
+/* ── Disabled state ──────────────────────────────────────────── */
+[disabled], [aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Loading state announcement ──────────────────────────────── */
+[aria-busy="true"] { cursor: wait; }
+
+/* ── Error colour-blind safe ─────────────────────────────────── */
+.error-text { color: var(--clr-secondary); font-weight: 700; }
+.success-text { color: var(--clr-success); font-weight: 700; }
+
+/* ── Settings-driven: High Contrast Mode ─────────────────────── */
+body.high-contrast {
+  --bg-cosmic: #000 !important;
+  background: #000 !important;
+  color: #fff;
+}
+
+body.high-contrast .auth-card,
+body.high-contrast .game-side-card,
+body.high-contrast .recall-questions-card,
+body.high-contrast .memory-board-3d {
+  background: #000;
+  border-color: #fff;
+}
+
+body.high-contrast .parent-dashboard-card,
+body.high-contrast .settings-card-white-3d,
+body.high-contrast .maths-card-white-3d,
+body.high-contrast .badge-card-white-3d {
+  background: #111;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.high-contrast .parent-dashboard-card *,
+body.high-contrast .settings-card-white-3d *,
+body.high-contrast .maths-card-white-3d *,
+body.high-contrast .badge-card-white-3d * {
+  color: #fff !important;
+}
+
+body.high-contrast .parent-stat-box {
+  background: #222;
+  border-color: #fff;
+}
+
+body.high-contrast .btn-3d,
+body.high-contrast .btn-circle-3d {
+  border-width: 3px;
+}
+
+body.high-contrast .speech-bubble {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* ── Settings-driven: Larger Text Mode ───────────────────────── */
+body.large-text {
+  font-size: 120%;
+}
+
+body.large-text h1, body.large-text h2, body.large-text h3,
+body.large-text h4, body.large-text h5 {
+  font-size: 1.25em;
+}
+
+body.large-text .btn-3d {
+  font-size: 1.3rem;
+  padding: 1rem 2.25rem;
+}
+
+body.large-text .stat-chip-3d,
+body.large-text .level-pill-3d {
+  font-size: 1.15rem;
+}
+
+/* ── Settings-driven: Reduced Motion Mode ────────────────────── */
+body.reduced-motion *,
+body.reduced-motion *::before,
+body.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+

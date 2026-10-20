@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="avBg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </radialGradient>
+    <radialGradient id="avSkin" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffdfba"/>
+      <stop offset="70%" stop-color="#f5be93"/>
+      <stop offset="100%" stop-color="#df9a67"/>
+    </radialGradient>
+    <linearGradient id="avHair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3f1d"/>
+      <stop offset="100%" stop-color="#311406"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="50" cy="50" r="48"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#avBg)" stroke="#38bdf8" stroke-width="3"/>
+  <g clip-path="url(#circleClip)">
+    <!-- Back Hair -->
+    <ellipse cx="50" cy="38" rx="28" ry="24" fill="url(#avHair)"/>
+    <!-- Face -->
+    <ellipse cx="50" cy="46" rx="20" ry="22" fill="url(#avSkin)"/>
+    <!-- Ears -->
+    <ellipse cx="29" cy="48" rx="4" ry="6" fill="#f5be93"/>
+    <ellipse cx="71" cy="48" rx="4" ry="6" fill="#f5be93"/>
+    <!-- Cheeks -->
+    <ellipse cx="38" cy="54" rx="4" ry="2.5" fill="#f472b6" opacity="0.4"/>
+    <ellipse cx="62" cy="54" rx="4" ry="2.5" fill="#f472b6" opacity="0.4"/>
+    <!-- Eyes -->
+    <ellipse cx="42" cy="45" rx="3.5" ry="4.5" fill="#180702"/>
+    <circle cx="41" cy="43" r="1.5" fill="#ffffff"/>
+    <ellipse cx="58" cy="45" rx="3.5" ry="4.5" fill="#180702"/>
+    <circle cx="57" cy="43" r="1.5" fill="#ffffff"/>
+    <!-- Smile -->
+    <path d="M 44 57 Q 50 63 56 57" fill="none" stroke="#451105" stroke-width="2" stroke-linecap="round"/>
+    <!-- Front Hair -->
+    <path d="M 28 38 C 32 20, 52 14, 68 18 C 74 24, 72 34, 64 36 C 58 32, 50 32, 46 38 C 42 34, 34 35, 28 38 Z" fill="url(#avHair)"/>
+    <!-- Blue Hoodie Torso -->
+    <path d="M 20 85 C 20 70, 35 68, 50 68 C 65 68, 80 70, 80 85 L 85 105 L 15 105 Z" fill="#2563eb"/>
+    <path d="M 44 68 Q 50 74 56 68 Z" fill="#ffffff"/>
+  </g>
+</svg>

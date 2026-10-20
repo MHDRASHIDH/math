@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320" width="100%" height="100%">
+  <defs>
+    <radialGradient id="trSkin" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffdfba"/>
+      <stop offset="70%" stop-color="#f5be93"/>
+      <stop offset="100%" stop-color="#df9a67"/>
+    </radialGradient>
+    <linearGradient id="trHair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3f1d"/>
+      <stop offset="40%" stop-color="#54250e"/>
+      <stop offset="100%" stop-color="#311406"/>
+    </linearGradient>
+    <linearGradient id="trHoodie" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <!-- Gold Trophy 3D Gradient -->
+    <linearGradient id="goldCup" x1="0" y1="0" x2="1" y2="0.8">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="25%" stop-color="#facc15"/>
+      <stop offset="70%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <linearGradient id="trophyBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#451a03"/>
+      <stop offset="100%" stop-color="#1c0b02"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Confetti sparkles in background -->
+  <circle cx="35" cy="40" r="4" fill="#f43f5e" opacity="0.8"/>
+  <rect x="250" y="50" width="6" height="12" rx="2" fill="#3b82f6" transform="rotate(25 250 50)" opacity="0.8"/>
+  <polygon points="215,20 220,32 208,28" fill="#eab308"/>
+  <polygon points="50,90 55,102 43,98" fill="#10b981"/>
+  <rect x="240" y="120" width="8" height="8" rx="2" fill="#a855f7" transform="rotate(45 240 120)"/>
+
+  <!-- Character -->
+  <g transform="translate(10, 20)">
+    <!-- Back Hair -->
+    <path d="M 50 115 C 40 75, 55 40, 110 35 C 170 40, 185 75, 175 115 Z" fill="url(#trHair)"/>
+    <!-- Neck -->
+    <path d="M 95 150 L 95 180 L 125 180 L 125 150 Z" fill="#df9a67"/>
+    <!-- Ears -->
+    <ellipse cx="58" cy="113" rx="9" ry="13" fill="#f5be93"/>
+    <ellipse cx="162" cy="113" rx="9" ry="13" fill="#f5be93"/>
+    <!-- Face -->
+    <path d="M 62 100 C 62 60, 158 60, 158 100 C 158 135, 135 163, 110 163 C 85 163, 62 135, 62 100 Z" fill="url(#trSkin)"/>
+    <!-- Cheeks -->
+    <ellipse cx="76" cy="127" rx="10" ry="5.5" fill="#f472b6" opacity="0.4"/>
+    <ellipse cx="144" cy="127" rx="10" ry="5.5" fill="#f472b6" opacity="0.4"/>
+
+    <!-- Joyful Eyes / Wink -->
+    <ellipse cx="84" cy="110" rx="10" ry="12" fill="#ffffff"/>
+    <ellipse cx="85" cy="111" rx="7" ry="8.5" fill="#431407"/>
+    <circle cx="86" cy="111" r="3.5" fill="#000000"/>
+    <circle cx="83" cy="107" r="2.5" fill="#ffffff"/>
+
+    <ellipse cx="136" cy="110" rx="10" ry="12" fill="#ffffff"/>
+    <ellipse cx="135" cy="111" rx="7" ry="8.5" fill="#431407"/>
+    <circle cx="134" cy="111" r="3.5" fill="#000000"/>
+    <circle cx="137" cy="107" r="2.5" fill="#ffffff"/>
+
+    <!-- Eyebrows excited -->
+    <path d="M 72 90 Q 84 82 95 88" stroke="#311406" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M 125 88 Q 136 82 148 90" stroke="#311406" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Nose -->
+    <path d="M 110 115 Q 113 124 107 126" stroke="#c27847" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Big Happy Open Grin -->
+    <path d="M 96 136 Q 110 156 124 136" fill="#581c0c" stroke="#451105" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 100 137 Q 110 144 120 137 Z" fill="#ffffff"/>
+
+    <!-- Front Hair -->
+    <path d="M 50 87 C 55 50, 80 27, 112 27 C 148 27, 172 50, 172 87 C 165 67, 145 70, 135 77 C 122 65, 100 63, 90 80 C 82 67, 65 73, 50 87 Z" fill="url(#trHair)"/>
+
+    <!-- White Collar -->
+    <path d="M 92 173 Q 110 187 128 173 L 128 183 Q 110 195 92 183 Z" fill="#f8fafc"/>
+
+    <!-- Blue Hoodie Torso -->
+    <path d="M 45 215 C 45 180, 80 175, 110 175 C 140 175, 175 180, 175 215 L 185 290 L 35 290 Z" fill="url(#trHoodie)"/>
+
+    <!-- Arms Holding Golden Trophy Cup! -->
+    <!-- Left arm wrapped forward -->
+    <path d="M 48 200 C 50 230, 80 250, 110 250" stroke="url(#trHoodie)" stroke-width="24" stroke-linecap="round" fill="none"/>
+    <!-- Right arm wrapped forward -->
+    <path d="M 172 200 C 170 230, 140 250, 110 250" stroke="url(#trHoodie)" stroke-width="24" stroke-linecap="round" fill="none"/>
+
+    <!-- Golden Trophy Cup in center -->
+    <g transform="translate(140, 145)">
+      <!-- Left Trophy Handle -->
+      <path d="M -16 25 C -35 25, -35 55, -16 65" fill="none" stroke="url(#goldCup)" stroke-width="7" stroke-linecap="round"/>
+      <!-- Right Trophy Handle -->
+      <path d="M 36 25 C 55 25, 55 55, 36 65" fill="none" stroke="url(#goldCup)" stroke-width="7" stroke-linecap="round"/>
+      <!-- Cup Body -->
+      <path d="M -18 15 L 38 15 C 38 48, 22 75, 10 75 C -2 75, -18 48, -18 15 Z" fill="url(#goldCup)"/>
+      <ellipse cx="10" cy="15" rx="28" ry="7" fill="#fef08a"/>
+      <!-- Star on Cup -->
+      <polygon points="10,32 13,42 23,42 15,48 18,58 10,52 2,58 5,48 -3,42 7,42" fill="#ffffff" opacity="0.9"/>
+      <!-- Trophy Stem -->
+      <rect x="6" y="75" width="8" height="18" fill="url(#goldCup)"/>
+      <!-- Trophy Base -->
+      <path d="M -5 93 L 25 93 L 30 110 L -10 110 Z" fill="url(#trophyBase)"/>
+      <rect x="-8" y="108" width="36" height="6" rx="2" fill="#a16207"/>
+      <!-- Gold Plaque on base -->
+      <rect x="-3" y="98" width="26" height="8" rx="2" fill="url(#goldCup)"/>
+    </g>
+
+    <!-- Hands clasping trophy handles -->
+    <ellipse cx="118" cy="180" rx="9" ry="8" fill="#f5be93"/>
+    <ellipse cx="178" cy="180" rx="9" ry="8" fill="#f5be93"/>
+  </g>
+</svg>

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MathMind Kids – Colorful 3D brain training and educational gaming adventure for kids and teens. Boost memory, pattern recognition, and maths skills!" />
+  <meta name="author" content="MathMind Kids" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+
+  <title>MathMind Kids – 3D Brain Training & Maths Games</title>
+
+  <!-- Google Fonts: Fredoka One for 3D game titles & Nunito for clean UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core & 3D Cartoon Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/theme-cartoon.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/accessibility.css" />
+</head>
+<body>
+  <!-- Skip Link for Keyboard Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app-wrapper">
+
+    <!-- ════════════════════════════════════════════
+         TOP APP BAR (Screenshot Style)
+    ═════════════════════════════════════════════ -->
+    <header id="top-app-bar" class="top-game-bar" role="banner" style="display:none;">
+      <div class="bar-left">
+        <button class="btn-circle-3d btn-back" aria-label="Go back" title="Go back">
+          ←
+        </button>
+        <h1 id="top-bar-title" style="font-family:'Fredoka One',sans-serif;font-size:1.35rem;margin:0;color:#fff;">
+          MathMind Kids
+        </h1>
+      </div>
+
+      <div class="bar-right">
+        <!-- Player Profile Chip (Rashid Level 5 👑) -->
+        <div class="player-chip" id="top-player-chip" data-nav="dashboard" role="button" tabindex="0" aria-label="View player profile">
+          <div class="chip-avatar">
+            <img id="top-chip-avatar" src="assets/images/avatar-rashid.svg" alt="Rashid avatar" />
+          </div>
+          <div class="chip-info">
+            <span class="chip-name" id="top-chip-name">Rashid <span style="color:#facc15">👑</span></span>
+            <span class="chip-level" id="top-chip-level">Level 5</span>
+          </div>
+        </div>
+
+        <!-- 7 Day Streak Pill -->
+        <div class="streak-pill-header" id="top-chip-streak-wrap">
+          <span>⭐</span>
+          <span id="top-chip-streak">7 Day Streak</span>
+        </div>
+
+        <!-- Sound Button -->
+        <button id="btn-sound-toggle-top" class="btn-circle-3d" aria-label="Toggle sound" title="Toggle sound">
+          🔊
+        </button>
+
+        <!-- Settings Button -->
+        <button class="btn-circle-3d" data-nav="settings" aria-label="Open settings" title="Open settings">
+          ⚙️
+        </button>
+      </div>
+    </header>
+
+    <!-- ════════════════════════════════════════════
+         MAIN CONTENT AREA (SPA SCREENS)
+    ═════════════════════════════════════════════ -->
+    <main id="main-content">
+
+      <!-- ══ 1. WELCOME SCREEN ═══════════════════════ -->
+      <section id="screen-welcome" class="screen active" aria-label="Welcome to MathMind Kids">
+        <div class="welcome-container">
+          <!-- 3D Logo -->
+          <div class="welcome-logo">
+            <img src="assets/images/logo-3d.svg" alt="MathMind Kids Logo" style="width:100%;max-width:420px;margin:0 auto;" />
+          </div>
+
+          <!-- Animated 3D Brain Mascot -->
+          <div class="welcome-mascot">
+            <img src="assets/images/brain-mascot.svg" alt="Friendly Brain Mascot" style="width:100%;height:100%;object-fit:contain;" />
+          </div>
+
+          <!-- Tagline Pill -->
+          <div>
+            <span class="tagline-pill">Play • Think • Grow</span>
+          </div>
+
+          <h2 style="font-family:'Fredoka One',sans-serif;font-size:1.9rem;margin-bottom:0.75rem;color:#fff;">
+            Train Your Brain with Fun & Challenges!
+          </h2>
+          <p style="color:#94a3b8;font-size:1.1rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;">
+            Supercharge your memory, sharpen mathematical reasoning, and master visual recall through exciting 3D challenges!
+          </p>
+
+          <div>
+            <button class="btn-3d btn-3d-gold" data-nav="auth" style="font-size:1.4rem;padding:1rem 3rem;">
+              ▶ Start Playing Now!
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ══ 2. LOGIN / REGISTER SCREEN ══════════════ -->
+      <section id="screen-auth" class="screen" aria-label="Login or Register">
+        <div class="auth-card">
+          <div style="text-align:center;margin-bottom:1.5rem;">
+            <img src="assets/images/brain-mascot.svg" alt="Mascot" style="width:80px;height:80px;margin:0 auto 0.5rem auto;" />
+            <h2 style="font-family:'Fredoka One',sans-serif;font-size:1.75rem;color:#fff;margin:0;">Player Portal</h2>
+            <p style="color:#94a3b8;font-size:0.9rem;">Sign in to save your level, badges & streaks!</p>
+          </div>
+
+          <!-- Mode Tabs -->
+          <div class="auth-tabs" role="tablist">
+            <button type="button" id="tab-btn-login" class="auth-tab-btn active" role="tab" aria-selected="true">
+              🔑 Log In
+            </button>
+            <button type="button" id="tab-btn-register" class="auth-tab-btn" role="tab" aria-selected="false">
+              ✨ Register
+            </button>
+          </div>
+
+          <!-- Error Alert Banner -->
+          <div id="auth-error-msg" class="auth-error" role="alert"></div>
+
+          <!-- Form -->
+          <form id="auth-form" novalidate>
+            <div class="form-group">
+              <label for="auth-username">Player Username</label>
+              <div class="input-with-icon">
+                <input type="text" id="auth-username" class="input-3d" placeholder="e.g. Rashid or Sarah" required autocomplete="username" />
+              </div>
+            </div>
+
+            <div class="form-group" id="auth-email-row" style="display:none;">
+              <label for="auth-email">Parent / Player Email</label>
+              <div class="input-with-icon">
+                <input type="email" id="auth-email" class="input-3d" placeholder="parent@example.com" autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="auth-password">Secret Password</label>
+              <div class="input-with-icon">
+                <input type="password" id="auth-password" class="input-3d" placeholder="••••••••" required autocomplete="current-password" />
+                <button type="button" id="btn-toggle-password" class="btn-toggle-pwd" aria-label="Toggle password visibility">
+                  👁️
+                </button>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <button type="submit" id="auth-submit-btn" class="btn-3d btn-3d-purple" style="width:100%;">
+                🚀 Log In
+              </button>
+            </div>
+          </form>
+
+          <div class="demo-divider">
+            <span>OR INSTANT DEMO</span>
+          </div>
+
+          <!-- One-Click Demo Mode Button -->
+          <button type="button" id="auth-demo-btn" class="btn-3d btn-3d-gold" style="width:100%;">
+            🎮 Instant Play as Rashid (Level 5)
+          </button>
+
+          <!-- Privacy & Demo Disclaimer -->
+          <p class="auth-disclaimer">
+            🔒 <strong>Demo Notice:</strong> Account authentication and progress are saved in your local browser storage (localStorage). No personal credentials or children's data are ever transmitted to external servers.
+          </p>
+        </div>
+      </section>
+
+
+      <!-- ══ 3. HOME DASHBOARD (Screenshot 2026-10-19 225502) ══ -->
+      <section id="screen-home" class="screen" aria-label="Home Dashboard">
+        <div class="home-banner">
+          <!-- Logo & Tagline -->
+          <div style="margin-bottom:0.75rem;">
+            <img src="assets/images/logo-3d.svg" alt="MathMind Kids Logo" style="max-width:320px;margin:0 auto;" />
+            <div style="margin-top:0.25rem;">
+              <span class="tagline-pill" style="font-size:1.05rem;padding:0.25rem 1.1rem;margin-bottom:0;">Play • Think • Grow</span>
+            </div>
+          </div>
+
+          <h2 class="bubbly-heading">
+            Train Your Brain<br>with Fun &amp; Challenges!
+          </h2>
+
+          <!-- Hero Stage: Teen Student on Left, Play Now in Center -->
+          <div class="home-characters-stage">
+            <div class="char-student-hero">
+              <img src="assets/images/character-student.svg" alt="Teen Student giving thumbs up" style="width:100%;height:100%;object-fit:contain;" />
+            </div>
+
+            <div class="home-center-cta">
+              <button class="btn-3d btn-3d-gold home-play-now-btn" data-nav="game-modes">
+                ▶ Play Now
+              </button>
+              <div style="display:flex;gap:0.75rem;">
+                <span style="background:rgba(15,23,62,0.8);border:1px solid #38bdf8;padding:0.4rem 1rem;border-radius:9999px;font-size:0.85rem;font-weight:800;color:#38bdf8;">
+                  ✨ Small Steps, Big Progress
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Bottom Navigation Cards / Mode Buttons -->
+          <div class="home-nav-grid" role="navigation" aria-label="Home Quick Navigation">
+            <!-- Game Modes (Purple) -->
+            <div class="home-nav-card nav-card-purple" data-nav="game-modes" role="button" tabindex="0">
+              <div class="nav-card-icon">🎮</div>
+              <div class="nav-card-title">Game Modes</div>
+            </div>
+
+            <!-- Rewards (Green) -->
+            <div class="home-nav-card nav-card-green" data-nav="rewards" role="button" tabindex="0">
+              <div class="nav-card-icon">🏆</div>
+              <div class="nav-card-title">Rewards</div>
+            </div>
+
+            <!-- Progress (Orange) -->
+            <div class="home-nav-card nav-card-orange" data-nav="dashboard" role="button" tabindex="0">
+              <div class="nav-card-icon">📈</div>
+              <div class="nav-card-title">Progress</div>
+            </div>
+
+            <!-- Parent Dashboard (Blue) -->
+            <div class="home-nav-card nav-card-blue" data-nav="dashboard" role="button" tabindex="0">
+              <div class="nav-card-icon">👥</div>
+              <div class="nav-card-title">Parent Dashboard</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ══ 4. GAME SELECTION SCREEN (Screenshot 2026-10-19 225613) ══ -->
+      <section id="screen-game-modes" class="screen" aria-label="Game Mode Selection">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+          <h2 style="font-family:'Fredoka One',sans-serif;font-size:2.2rem;color:#fff;margin-bottom:0.35rem;">
+            Choose Your Game Mode
+          </h2>
+          <p style="color:#94a3b8;font-size:1.05rem;">
+            Select a mode and start your brain training journey!
+          </p>
+        </div>
+
+        <div class="modes-grid-3d" role="list">
+          <!-- Mode 1: Memory Sequence (Blue) -->
+          <div class="mode-card-3d mode-card-blue" data-nav="memory" role="listitem" tabindex="0">
+            <div class="mode-card-icon-wrap">
+              🔮
+            </div>
+            <div class="mode-card-info">
+              <h3>Memory Sequence</h3>
+              <p>Remember the pattern and repeat it!</p>
+            </div>
+            <div class="mode-card-arrow">➔</div>
+          </div>
+
+          <!-- Mode 2: Match the Pairs (Purple) -->
+          <div class="mode-card-3d mode-card-purple" data-nav="cards" role="listitem" tabindex="0">
+            <div class="mode-card-icon-wrap">
+              🃏
+            </div>
+            <div class="mode-card-info">
+              <h3>Match the Pairs</h3>
+              <p>Find all the matching animal cards!</p>
+            </div>
+            <div class="mode-card-arrow">➔</div>
+          </div>
+
+          <!-- Mode 3: Recall Challenge (Green) -->
+          <div class="mode-card-3d mode-card-green" data-nav="recall" role="listitem" tabindex="0">
+            <div class="mode-card-icon-wrap">
+              🖼️
+            </div>
+            <div class="mode-card-info">
+              <h3>Recall Challenge</h3>
+              <p>Look, remember, and answer questions!</p>
+            </div>
+            <div class="mode-card-arrow">➔</div>
+          </div>
+
+          <!-- Mode 4: Maths Puzzles (Orange) -->
+          <div class="mode-card-3d mode-card-orange" data-nav="maths" role="listitem" tabindex="0">
+            <div class="mode-card-icon-wrap">
+              🔢
+            </div>
+            <div class="mode-card-info">
+              <h3>Maths Puzzles</h3>
+              <p>Solve number sequences and level up!</p>
+            </div>
+            <div class="mode-card-arrow">➔</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:1.5rem;">
+          <button class="btn-3d btn-3d-blue" data-nav="home">
+            ← Back to Home
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ══ 5. MEMORY SEQUENCE SCREEN (Screenshot 2026-10-19 225625) ══ -->
+      <section id="screen-memory" class="screen" aria-label="Memory Sequence Game">
+        <!-- In-game status bar -->
+        <div class="ingame-status-bar">
+          <div class="level-pill-3d" id="memory-level">Level 2</div>
+          <div class="progress-track-3d">
+            <div class="progress-fill-3d" id="memory-progress-fill" style="width:40%;"></div>
+          </div>
+          <div class="stat-chip-3d">Score <span id="memory-score">60</span></div>
+          <div class="stat-chip-3d">⏱ <span id="memory-timer">18s</span></div>
+        </div>
+
+        <!-- 3D Sleek Game Board -->
+        <div class="memory-board-3d">
+          <h3 style="font-family:'Fredoka One',sans-serif;font-size:1.35rem;color:#f1f5f9;margin-bottom:0.75rem;">
+            Remember the sequence...
+          </h3>
+
+          <!-- Top row: Sequence Display Glowing Spheres -->
+          <div class="sphere-row" id="memory-top-spheres">
+            <!-- Populated with Red, Blue, Green, Yellow, Purple spheres -->
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(139,92,246,0.3);margin:1.5rem auto;max-width:85%;" />
+
+          <h3 style="font-family:'Fredoka One',sans-serif;font-size:1.35rem;color:#f1f5f9;margin-bottom:0.75rem;">
+            Now repeat the sequence
+          </h3>
+
+          <!-- Dashed Circles Slot Area -->
+          <div class="sphere-row" id="memory-dashed-slots" style="min-height:70px;">
+            <!-- Rendered dynamically -->
+          </div>
+
+          <!-- Bottom Clickable Input Spheres -->
+          <div class="sphere-row" id="memory-input-spheres">
+            <!-- Clickable spheres -->
+          </div>
+
+          <!-- Mascot Cheering & Speech Bubble on Left -->
+          <div class="mascot-feedback-row">
+            <img src="assets/images/brain-mascot.svg" alt="Brain Mascot" style="width:75px;height:75px;" />
+            <div class="speech-bubble" id="memory-speech-bubble">Great Job!</div>
+          </div>
+        </div>
+
+        <!-- Action Controls -->
+        <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;">
+          <button id="memory-start-btn" class="btn-3d btn-3d-green">
+            ▶ Start
+          </button>
+          <button id="memory-restart-btn" class="btn-3d btn-3d-purple">
+            🔄 Restart
+          </button>
+          <button id="memory-hint-btn" class="btn-3d btn-3d-blue">
+            💡 Hint
+          </button>
+          <button class="btn-3d btn-3d-orange" data-nav="game-modes">
+            ← Game Modes
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ══ 6. MATCHING CARDS SCREEN (Screenshot 2026-10-19 225528) ══ -->
+      <section id="screen-cards" class="screen" aria-label="Matching Cards Game">
+        <!-- In-game status bar -->
+        <div class="ingame-status-bar">
+          <div class="level-pill-3d" id="cards-level">Level 3</div>
+          <div class="progress-track-3d">
+            <div class="progress-fill-3d" id="cards-progress-fill" style="width:50%;"></div>
+          </div>
+          <div class="stat-chip-3d">Score <span id="cards-score">120</span></div>
+          <div class="stat-chip-3d">⏱ <span id="cards-timer">25s</span></div>
+        </div>
+
+        <!-- 3D Cards Arena: Grid on Left + Info Card on Right -->
+        <div class="cards-arena-3d">
+          <!-- 4x3 or 4x4 Grid -->
+          <div class="cards-board-3d" id="cards-grid-3d">
+            <!-- Dynamic 3D animal cards -->
+          </div>
+
+          <!-- Side Info Box -->
+          <div class="game-side-card">
+            <h4 style="font-family:'Fredoka One',sans-serif;font-size:1.2rem;color:#38bdf8;margin-bottom:0.5rem;">
+              Find all the pairs!
+            </h4>
+            <div style="font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem;">
+              Moves: <span id="cards-moves-count">4</span>
+            </div>
+            <div style="font-size:1rem;font-weight:800;color:#facc15;margin-bottom:1.5rem;">
+              ⭐ <span id="cards-pairs-count">8 pairs</span>
+            </div>
+
+            <!-- Mascot cheering in side card -->
+            <div style="display:flex;flex-direction:column;align-items:center;margin-top:1rem;">
+              <div class="speech-bubble" id="cards-speech-bubble" style="margin-bottom:0.5rem;">Good Memory!</div>
+              <img src="assets/images/brain-mascot.svg" alt="Brain Mascot" style="width:75px;height:75px;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;">
+          <button id="cards-start-btn" class="btn-3d btn-3d-green">
+            ▶ Start Game
+          </button>
+          <button id="cards-restart-btn" class="btn-3d btn-3d-purple">
+            🔄 Restart
+          </button>
+          <button id="cards-hint-btn" class="btn-3d btn-3d-blue">
+            💡 Peek Hint
+          </button>
+          <button class="btn-3d btn-3d-orange" data-nav="game-modes">
+            ← Game Modes
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ══ 7. RECALL CHALLENGE SCREEN (Screenshot 2026-10-19 225640) ══ -->
+      <section id="screen-recall" class="screen" aria-label="Recall Challenge Game">
+        <!-- In-game status bar -->
+        <div class="ingame-status-bar">
+          <div class="level-pill-3d" id="recall-level">Level 2</div>
+          <div class="progress-track-3d">
+            <div class="progress-fill-3d" id="recall-progress-fill" style="width:65%;"></div>
+          </div>
+          <div class="stat-chip-3d">Score <span id="recall-score">90</span></div>
+          <div class="stat-chip-3d">⏱ <span id="recall-timer">20s</span></div>
+        </div>
+
+        <!-- 3D Illustrated Scene on Left + Questions Card on Right -->
+        <div class="recall-stage-3d">
+          <!-- Left: Illustrated Scene -->
+          <div class="scene-card-3d">
+            <div class="scene-img-wrap">
+              <img id="recall-scene-img" src="assets/images/scene-desk.svg" alt="Desk Scene with backpack, bottle, books, glasses, basketball, plant" />
+              <!-- Hidden curtain when testing recall -->
+              <div id="recall-scene-cover" style="display:none;position:absolute;inset:0;background:rgba(10,13,38,0.92);align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+                <span style="font-size:3rem;">🔒</span>
+                <span style="font-family:'Fredoka One',sans-serif;font-size:1.3rem;color:#38bdf8;">Scene Hidden!</span>
+                <span style="color:#94a3b8;font-size:0.9rem;">Recall what you saw!</span>
+              </div>
+            </div>
+            <div class="scene-controls-bar">
+              <button id="recall-show-again-btn" class="btn-3d btn-3d-blue" style="padding:0.6rem 1.5rem;font-size:1rem;">
+                👁 Show Again
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Questions Card -->
+          <div class="recall-questions-card">
+            <h3 style="font-family:'Fredoka One',sans-serif;font-size:1.4rem;color:#38bdf8;margin-bottom:1rem;">
+              Answer the questions:
+            </h3>
+
+            <div id="recall-questions-list">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <div style="margin-top:1rem;">
+              <button id="recall-submit-btn-3d" class="btn-3d btn-3d-green" style="width:100%;">
+                ✅ Submit Answers
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;">
+          <button id="recall-start-btn" class="btn-3d btn-3d-green">
+            ▶ Start Game
+          </button>
+          <button class="btn-3d btn-3d-orange" data-nav="game-modes">
+            ← Game Modes
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ══ 8. MATHS PUZZLES SCREEN (Screenshot 2026-10-19 225707) ══ -->
+      <section id="screen-maths" class="screen" aria-label="Maths Puzzles Game">
+        <!-- In-game status bar -->
+        <div class="ingame-status-bar">
+          <div class="level-pill-3d" id="maths-level">Level 3</div>
+          <div class="progress-track-3d">
+            <div class="progress-fill-3d" id="maths-progress-fill" style="width:75%;"></div>
+          </div>
+          <div class="stat-chip-3d">Score <span id="maths-score">150</span></div>
+          <div class="stat-chip-3d">⏱ <span id="maths-timer">15s</span></div>
+        </div>
+
+        <!-- White 3D Card on Left + Teen Student with Glowing Lightbulb on Right -->
+        <div class="maths-stage-3d">
+          <!-- Left: White 3D Puzzle Card -->
+          <div class="maths-card-white-3d">
+            <h3 id="maths-puzzle-title">What number comes next?</h3>
+
+            <!-- Sequence Boxes: [ 3 ] [ 6 ] [ 12 ] [ 24 ] [ ? ] -->
+            <div class="sequence-boxes-row" id="maths-seq-boxes">
+              <div class="seq-box">3</div>
+              <div class="seq-box">6</div>
+              <div class="seq-box">12</div>
+              <div class="seq-box">24</div>
+              <div class="seq-box" style="border-color:#3b82f6;color:#2563eb;background:#eff6ff;">?</div>
+            </div>
+
+            <!-- 4 Colorful Answer Buttons -->
+            <div class="maths-answers-row" id="maths-ans-buttons">
+              <!-- Dynamically populated buttons -->
+            </div>
+          </div>
+
+          <!-- Right: Teen Student Thinking Character with Lightbulb -->
+          <div style="display:flex;flex-direction:column;align-items:center;position:relative;">
+            <div class="speech-bubble" id="maths-speech-bubble" style="margin-bottom:0.5rem;">
+              Think Logically! 💡
+            </div>
+            <img src="assets/images/character-thinking.svg" alt="Teen student thinking with glowing lightbulb" style="width:230px;height:290px;object-fit:contain;" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;">
+          <button id="maths-start-btn" class="btn-3d btn-3d-green">
+            ▶ Start Game
+          </button>
+          <button id="maths-restart-btn" class="btn-3d btn-3d-purple">
+            🔄 Restart
+          </button>
+          <button id="maths-hint-btn" class="btn-3d btn-3d-blue">
+            💡 Hint
+          </button>
+          <button class="btn-3d btn-3d-orange" data-nav="game-modes">
+            ← Game Modes
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ══ 9. UNIFIED RESULTS CELEBRATION SCREEN ══ -->
+      <section id="screen-results" class="screen" aria-label="Game Results Celebration">
+        <div class="auth-card" style="max-width:550px;text-align:center;">
+          <div style="font-size:3.5rem;margin-bottom:0.5rem;">🏆</div>
+          <h2 style="font-family:'Fredoka One',sans-serif;font-size:2rem;color:#facc15;margin-bottom:0.25rem;">
+            Challenge Complete!
+          </h2>
+          <p id="res-game-title" style="color:#38bdf8;font-size:1.15rem;font-weight:800;margin-bottom:1rem;">
+            Memory Sequence
+          </p>
+
+          <!-- Stars Rating -->
+          <div id="res-stars-val" style="font-size:2.5rem;margin-bottom:1.5rem;letter-spacing:0.3rem;">
+            ⭐⭐⭐
+          </div>
+
+          <!-- Result Metrics Grid -->
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.5rem;">
+            <div style="background:rgba(15,23,62,0.9);border:2px solid #38bdf8;border-radius:16px;padding:0.75rem;">
+              <div style="font-size:0.8rem;color:#94a3b8;font-weight:700;">Final Score</div>
+              <div id="res-score-val" style="font-family:'Fredoka One',sans-serif;font-size:1.6rem;color:#fff;">0</div>
+            </div>
+            <div style="background:rgba(15,23,62,0.9);border:2px solid #a855f7;border-radius:16px;padding:0.75rem;">
+              <div style="font-size:0.8rem;color:#94a3b8;font-weight:700;">XP Earned</div>
+              <div id="res-xp-val" style="font-family:'Fredoka One',sans-serif;font-size:1.6rem;color:#c084fc;">+60 XP</div>
+            </div>
+            <div style="background:rgba(15,23,62,0.9);border:2px solid #22c55e;border-radius:16px;padding:0.75rem;">
+              <div style="font-size:0.8rem;color:#94a3b8;font-weight:700;">Accuracy</div>
+              <div id="res-accuracy-val" style="font-family:'Fredoka One',sans-serif;font-size:1.6rem;color:#4ade80;">92%</div>
+            </div>
+            <div style="background:rgba(15,23,62,0.9);border:2px solid #f59e0b;border-radius:16px;padding:0.75rem;">
+              <div style="font-size:0.8rem;color:#94a3b8;font-weight:700;">Time Taken</div>
+              <div id="res-time-val" style="font-family:'Fredoka One',sans-serif;font-size:1.6rem;color:#fde047;">18s</div>
+            </div>
+          </div>
+
+          <p id="res-message-val" style="color:#e2e8f0;font-size:1rem;font-weight:700;margin-bottom:1.5rem;">
+            Outstanding cognitive performance!
+          </p>
+
+          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+            <button id="res-replay-btn" class="btn-3d btn-3d-green">
+              🔄 Play Again
+            </button>
+            <button class="btn-3d btn-3d-blue" data-nav="rewards">
+              🏆 View Rewards
+            </button>
+            <button class="btn-3d btn-3d-purple" data-nav="home">
+              🏠 Dashboard
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ══ 10. REWARDS & BADGES SCREEN (Screenshot 2026-10-19 225723) ══ -->
+      <section id="screen-rewards" class="screen" aria-label="Rewards and Badges">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+          <h2 style="font-family:'Fredoka One',sans-serif;font-size:2.2rem;color:#fff;margin-bottom:1rem;">
+            Rewards &amp; Badges
+          </h2>
+
+          <!-- Badges / Stars / Levels Tabs -->
+          <div class="auth-tabs" style="max-width:400px;margin:0 auto 1.5rem auto;">
+            <button type="button" class="auth-tab-btn rewards-tab-btn active" data-tab="badges">
+              Badges
+            </button>
+            <button type="button" class="auth-tab-btn rewards-tab-btn" data-tab="stars">
+              Stars
+            </button>
+            <button type="button" class="auth-tab-btn rewards-tab-btn" data-tab="levels">
+              Levels
+            </button>
+          </div>
+        </div>
+
+        <div class="rewards-stage-3d">
+          <!-- Left: Teen Student Holding Golden Trophy -->
+          <div class="rewards-left-column">
+            <div class="speech-bubble" style="margin-bottom:0.25rem;">You're Awesome!</div>
+            <img src="assets/images/character-trophy.svg" alt="Teen student holding golden trophy cup" style="width:240px;height:280px;object-fit:contain;" />
+
+            <!-- Total Stars Pill (⭐ Total Stars 1250) -->
+            <div style="background:rgba(15,23,62,0.9);border:2px solid #facc15;border-radius:9999px;padding:0.6rem 1.75rem;display:flex;align-items:center;gap:0.75rem;box-shadow:0 6px 15px rgba(0,0,0,0.4);">
+              <span style="font-size:1.8rem;">⭐</span>
+              <div style="text-align:left;">
+                <div style="font-size:0.75rem;color:#94a3b8;font-weight:700;">Total Stars</div>
+                <div style="font-family:'Fredoka One',sans-serif;font-size:1.5rem;color:#fff;">1250</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 6 3D Badge Cards Grid -->
+          <div id="rewards-content-container">
+            <!-- Rendered by rewards.js -->
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:2rem;">
+          <button class="btn-3d btn-3d-blue" data-nav="home">
+            ← Back to Home
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ══ 11. PARENT PROGRESS DASHBOARD (Screenshot 2026-10-19 225741) ══ -->
+      <section id="screen-dashboard" class="screen" aria-label="Parent Progress Dashboard">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:1rem;">
+          <h2 style="font-family:'Fredoka One',sans-serif;font-size:2.2rem;color:#fff;margin:0;">
+            Parent Dashboard
+          </h2>
+          <button id="btn-export-csv-top" class="btn-3d btn-3d-green" style="padding:0.6rem 1.5rem;font-size:1rem;">
+            📥 Export CSV
+          </button>
+        </div>
+
+        <!-- Child Progress White Card -->
+        <div class="parent-dashboard-card">
+          <!-- Header Profile Row -->
+          <div class="parent-dash-header">
+            <div style="width:75px;height:75px;border-radius:50%;overflow:hidden;border:3px solid #38bdf8;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+              <img id="parent-child-avatar" src="assets/images/avatar-rashid.svg" alt="Child Avatar" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div>
+              <h3 id="parent-child-name" style="font-family:'Fredoka One',sans-serif;font-size:1.6rem;color:#0f172a;margin-bottom:0.25rem;">
+                Rashid
+              </h3>
+              <div id="parent-child-level" style="font-weight:800;color:#2563eb;font-size:0.95rem;">
+                Level 5
+              </div>
+            </div>
+
+            <!-- XP Bar -->
+            <div style="flex:1;min-width:200px;margin-left:auto;">
+              <div style="display:flex;justify-content:space-between;font-weight:800;font-size:0.85rem;margin-bottom:0.35rem;color:#64748b;">
+                <span>Cognitive XP Progress</span>
+                <span id="parent-child-xp">750 / 1000 XP</span>
+              </div>
+              <div style="height:14px;background:#e2e8f0;border-radius:9999px;overflow:hidden;">
+                <div id="parent-child-xp-bar" style="height:100%;width:75%;background:linear-gradient(90deg,#10b981,#34d399);border-radius:9999px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Stat Boxes Row -->
+          <div class="parent-dash-stats-row">
+            <div class="parent-stat-box">
+              <div class="stat-box-title">🎮 Total Games</div>
+              <div class="stat-box-num" id="dash-stat-total-games">48</div>
+            </div>
+            <div class="parent-stat-box">
+              <div class="stat-box-title">🎯 Accuracy</div>
+              <div class="stat-box-num" id="dash-stat-accuracy">92%</div>
+            </div>
+            <div class="parent-stat-box">
+              <div class="stat-box-title">⏱ Practice Time</div>
+              <div class="stat-box-num" id="dash-stat-time">6h 32m</div>
+            </div>
+            <div class="parent-stat-box">
+              <div class="stat-box-title">🔥 Current Streak</div>
+              <div class="stat-box-num" id="dash-stat-streak">7 days</div>
+            </div>
+          </div>
+
+          <!-- Bottom Grid: Performance Overview + Recent Activity -->
+          <div class="parent-dash-bottom-grid">
+            <!-- Performance Overview (Bar Chart) -->
+            <div style="background:#f8fafc;border:2px solid #e2e8f0;border-radius:20px;padding:1.25rem;">
+              <h4 style="font-family:'Fredoka One',sans-serif;font-size:1.15rem;color:#1e293b;margin-bottom:0.75rem;">
+                Performance Overview
+              </h4>
+              <div id="parent-performance-chart">
+                <!-- Rendered by parent-dashboard.js -->
+              </div>
+            </div>
+
+            <!-- Recent Activity List -->
+            <div style="background:#f8fafc;border:2px solid #e2e8f0;border-radius:20px;padding:1.25rem;">
+              <h4 style="font-family:'Fredoka One',sans-serif;font-size:1.15rem;color:#1e293b;margin-bottom:0.75rem;">
+                Recent Activity
+              </h4>
+              <div id="parent-recent-activity-list">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:1.5rem;">
+          <button class="btn-3d btn-3d-blue" data-nav="home">
+            ← Back to Home
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ══ 12. SETTINGS SCREEN (Screenshot 2026-10-19 225800) ══ -->
+      <section id="screen-settings" class="screen" aria-label="Settings">
+        <div class="settings-card-white-3d">
+          <h2 style="font-family:'Fredoka One',sans-serif;font-size:2rem;color:#1e3a8a;margin-bottom:1.5rem;text-align:center;">
+            Settings
+          </h2>
+
+          <h3 style="font-family:'Fredoka One',sans-serif;font-size:1.2rem;color:#2563eb;margin-bottom:0.75rem;">
+            Audio &amp; Display
+          </h3>
+
+          <!-- Toggles -->
+          <div class="settings-row-clean">
+            <div class="settings-label-clean">
+              <span>🔊</span> Sound Effects
+            </div>
+            <label class="toggle" aria-label="Toggle sound effects">
+              <input type="checkbox" id="setting-sound-toggle" checked />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-row-clean">
+            <div class="settings-label-clean">
+              <span>🎵</span> Background Music
+            </div>
+            <label class="toggle" aria-label="Toggle background music">
+              <input type="checkbox" id="setting-music-toggle" checked />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-row-clean">
+            <div class="settings-label-clean">
+              <span>👁️</span> High Contrast Mode
+            </div>
+            <label class="toggle" aria-label="Toggle high contrast">
+              <input type="checkbox" id="setting-contrast-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-row-clean">
+            <div class="settings-label-clean">
+              <span>🔍</span> Larger Text
+            </div>
+            <label class="toggle" aria-label="Toggle larger text">
+              <input type="checkbox" id="setting-large-text-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-row-clean" style="border-bottom:none;">
+            <div class="settings-label-clean">
+              <span>🎬</span> Reduced Motion
+            </div>
+            <label class="toggle" aria-label="Toggle reduced motion">
+              <input type="checkbox" id="setting-motion-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <h3 style="font-family:'Fredoka One',sans-serif;font-size:1.2rem;color:#2563eb;margin:1.5rem 0 0.75rem 0;">
+            Your Progress
+          </h3>
+
+          <div style="display:flex;flex-direction:column;gap:0.85rem;">
+            <button id="btn-settings-export-csv" class="btn-3d btn-3d-purple" style="width:100%;font-size:1rem;">
+              📄 Export Progress (CSV)
+            </button>
+            <button id="btn-settings-clear-data" class="btn-3d btn-3d-red" style="width:100%;font-size:1rem;">
+              🗑️ Clear Local Data
+            </button>
+            <button class="btn-3d btn-3d-orange btn-logout-action" style="width:100%;font-size:1rem;">
+              🚪 Log Out
+            </button>
+          </div>
+
+          <p style="font-size:0.8rem;color:#64748b;margin-top:1.5rem;text-align:center;line-height:1.4;">
+            🔒 <strong>All data is stored locally on your device.</strong><br>
+            No data is shared with external servers.
+          </p>
+        </div>
+
+        <div style="text-align:center;margin-top:1.5rem;">
+          <button class="btn-3d btn-3d-blue" data-nav="home">
+            ← Back to Home
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+  </div><!-- /.app-wrapper -->
+
+  <!-- Generic Confirmation Modal Overlay -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="generic-modal" class="modal">
+      <button class="modal-close" aria-label="Close dialog">&times;</button>
+      <div class="modal-icon" style="font-size:3rem;text-align:center;margin-bottom:var(--sp-md)"></div>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-msg"></p>
+      <div class="modal-actions">
+        <button id="modal-cancel-btn" class="btn btn-outline">Cancel</button>
+        <button id="modal-confirm-btn" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ES Module Bootstrap -->
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>

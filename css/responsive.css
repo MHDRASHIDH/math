@@ -1,0 +1,150 @@
+/* ============================================================
+   MathMind Kids – Responsive Stylesheet
+   Breakpoints: 1024px (tablet), 768px (mobile), 480px (small)
+   ============================================================ */
+
+/* ── Tablet (≤ 1024px) ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .games-grid { grid-template-columns: repeat(2, 1fr); }
+  .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+  .badges-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+}
+
+/* ── Mobile (≤ 768px) ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --sp-xl:  1.5rem;
+    --sp-2xl: 2rem;
+  }
+
+  /* Navigation */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(13,15,26,0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--clr-border);
+    padding: var(--sp-md);
+    gap: var(--sp-xs);
+    z-index: 99;
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a { width: 100%; padding: var(--sp-md); border-radius: var(--radius-md); }
+  .hamburger { display: flex; }
+
+  /* Hero */
+  .hero { padding: var(--sp-xl) var(--sp-md); }
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero p  { font-size: var(--fs-base); }
+  .hero-stats { gap: var(--sp-lg); }
+
+  /* Games */
+  .games-grid { grid-template-columns: 1fr; }
+  .games-section { padding: var(--sp-xl) var(--sp-md); }
+
+  /* Game screen */
+  .screen { padding: var(--sp-md); }
+  .game-header { flex-direction: column; align-items: flex-start; }
+  .game-stats { width: 100%; justify-content: flex-start; }
+
+  /* Memory buttons */
+  .seq-btn { width: 64px; height: 64px; font-size: var(--fs-xl); }
+
+  /* Matching cards */
+  .cards-grid { gap: var(--sp-xs); }
+
+  /* Maths options */
+  .maths-options { gap: var(--sp-sm); }
+  .option-btn { padding: var(--sp-md); font-size: var(--fs-xl); }
+
+  /* Dashboard */
+  .dashboard-section { padding: var(--sp-xl) var(--sp-md); }
+  .dashboard-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Rewards */
+  .rewards-section { padding: var(--sp-xl) var(--sp-md); }
+  .badges-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+
+  /* Settings */
+  .settings-section { padding: var(--sp-xl) var(--sp-md); }
+  .settings-row { flex-direction: column; align-items: flex-start; gap: var(--sp-sm); }
+
+  /* Feedback */
+  .feedback-banner { max-width: 90vw; padding: var(--sp-lg); }
+  .feedback-emoji  { font-size: 3rem; }
+
+  /* Toast */
+  .toast-container { bottom: var(--sp-md); right: var(--sp-md); left: var(--sp-md); }
+  .toast { max-width: 100%; }
+
+  /* Section titles */
+  .section-title    { font-size: var(--fs-2xl); }
+  .section-subtitle { font-size: var(--fs-base); }
+
+  /* Modal */
+  .modal { padding: var(--sp-lg); }
+}
+
+/* ── Small Mobile (≤ 480px) ─────────────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --sp-lg: 1.25rem;
+    --sp-xl: 1.25rem;
+  }
+
+  .nav-logo { font-size: var(--fs-xl); }
+
+  .hero h1 { font-size: 1.9rem; }
+  .hero-cta { flex-direction: column; align-items: center; }
+  .hero-cta .btn { width: 100%; max-width: 280px; justify-content: center; }
+
+  .game-card { padding: var(--sp-md); }
+  .game-card-icon { width: 52px; height: 52px; font-size: 1.5rem; }
+
+  .seq-btn { width: 54px; height: 54px; font-size: var(--fs-lg); }
+
+  .maths-options { grid-template-columns: 1fr; }
+
+  .dashboard-grid { grid-template-columns: 1fr; }
+
+  .badges-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .bar-chart { height: 100px; }
+
+  .result-stats { gap: var(--sp-lg); }
+
+  .difficulty-selector { justify-content: center; }
+  .age-selector { justify-content: center; }
+
+  .btn-lg { padding: 0.8rem 1.5rem; font-size: var(--fs-base); }
+
+  .game-arena { padding: var(--sp-md); }
+}
+
+/* ── Landscape Mobile ───────────────────────────────────────── */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero { padding: var(--sp-lg) var(--sp-md); }
+  .hero h1 { font-size: 2rem; }
+  .game-arena { min-height: 200px; }
+}
+
+/* ── Print ───────────────────────────────────────────────────── */
+@media print {
+  .site-header,
+  .site-footer,
+  .nav-controls,
+  .btn-icon,
+  #confetti-canvas,
+  .toast-container,
+  .modal-overlay { display: none !important; }
+
+  body { background: #fff; color: #000; }
+  .screen { display: block !important; }
+  .dashboard-card { border: 1px solid #ccc; }
+  .progress-table th, .progress-table td { border: 1px solid #ccc; }
+}
